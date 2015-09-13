@@ -1,0 +1,48 @@
+<%= form_for @trip do |f| %>
+ 
+  <% if @trip.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@trip.errors.count, "error") %> prohibited
+        this trip from being saved:
+      </h2>
+      <ul>
+        <% @trip.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <!-- <p>
+    <%= f.label :place %><br>
+    <%= f.text_field :place %>
+  </p> -->
+<!--   <div class="field">
+    <%= f.label :place %><br />
+    <%= f.country_select :place, {priority: %w(US CA), prompt: 'Please select a country'} %>
+  </div>
+
+  <div class="field">
+  <%= f.label :place %><br />
+  <%= render partial: 'subregion_select', locals: {parent_region: f.object.place} %>
+</div>
+ -->
+ <!--  
+  <p>
+    <%= f.submit %>
+  </p> -->
+
+
+  <div class="field">
+    <%= f.label :country_code %><br />
+    <%= f.country_select :place, priority: %w(US CA), prompt: 'Please select a country' %>
+  </div>
+  <div class="field">
+    <%= f.label :state_code %><br />
+    <%= render partial: 'subregion_select', locals: {parent_region: f.object.place} %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
