@@ -216,7 +216,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bootstrap-sass (= 3.2.0.0)
+  bootstrap-sass
   carmen-rails
   coffee-rails (~> 4.1.0)
   cucumber-rails
