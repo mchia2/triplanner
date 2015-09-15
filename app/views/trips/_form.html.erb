@@ -1,3 +1,6 @@
+<html>
+<body>
+
 <%= form_for @trip do |f| %>
  
   <% if @trip.errors.any? %>
@@ -13,7 +16,20 @@
       </ul>
     </div>
   <% end %>
- 
+ <%= render 'layouts/header' %>
+    <div class="container">
+      <div class="col-md-6 col-md-offset-3">
+      
+      <h1 alighn="left">
+        <%= f.label :place %>
+      </h1>
+      <h2><%= f.text_field :place %></h2>
+      <%= yield %>
+      <p>
+        <%= f.submit %>
+      </p>
+    </div>
+  </body>
   <!-- <p>
     <%= f.label :place %><br>
     <%= f.text_field :place %>
@@ -28,21 +44,8 @@
   <%= render partial: 'subregion_select', locals: {parent_region: f.object.place} %>
 </div>
  -->
- <!--  
-  <p>
-    <%= f.submit %>
-  </p> -->
-
-
-  <div class="field">
-    <%= f.label :country_code %><br />
-    <%= f.country_select :place, priority: %w(US CA), prompt: 'Please select a country' %>
-  </div>
-  <div class="field">
-    <%= f.label :state_code %><br />
-    <%= render partial: 'subregion_select', locals: {parent_region: f.object.place} %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  
+  
+</html>
+  <!--  -->
 <% end %>
