@@ -1,19 +1,73 @@
-<h1> <center>  Welcome to TripPlanner </center></h1>
+<% provide(:title, "Home") %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><%= full_title(yield(:title)) %></title>
+	<%= stylesheet_link_tag 'application', media: 'all',
+                                           'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+	<!--[if lt IE 9]>
+	      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+	      </script>
+	    <![endif]-->
+	</head>
+<body>
+<% if user_signed_in? %>
+<header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Trip Planner", welcome_index_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "New Trip",   new_trip_path %></li>
+            <li><%= link_to "Current Trips", trips_path %></li>
+            <li><%= link_to "Log out", destroy_user_session_path, :method => :delete %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+</body>
+
+<div class="center jumbotron">
+  <h1>Welcome to the Trip Planner App</h1>
 
 
-<p align="center"><i> Use this web application to explore the best attractions and restaurants in cities! </i> </p>
-
-<p align="center">Please select one of the following: </p> 
-
-
-
-<div style="float:left;">
-	<center> <strong> <%= button_to "New Trip", new_trip_path, :class => "button", :method => :get %> </strong> </center> 
+  <%= link_to "Current Trips", trips_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<div style="float:left;">
-	<center> <strong> <%= button_to "Current Trips", trips_path, :class => "button", :method => :get %> </strong> </center> 
+<% else %>
+
+ <header class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <%= link_to "Trip Planner", welcome_index_path, id: "logo" %>
+        <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "New Trip",   new_trip_path %></li>
+            <li><%= link_to "Current Trips", trips_path %></li>
+            <li><%= link_to "Log in", new_user_session_path %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+    </div>
+</body>
+
+<div class="center jumbotron">
+  <h1>Welcome to the Trip Planner App</h1>
+
+
+  <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
 </div>
+
+
+
+</html>
+<% end %>
 
 
  
