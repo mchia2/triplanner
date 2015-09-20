@@ -23,10 +23,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bootstrap-sass'
-<<<<<<< HEAD
-=======
 
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -39,16 +36,13 @@ gem 'bootstrap-sass'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   # gem 'byebug'
-<<<<<<< HEAD
   gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-=======
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
   gem 'sqlite3'
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -75,8 +69,6 @@ gem 'geocoder'
 
 gem 'gmaps4rails'
 
-<<<<<<< HEAD
-=======
 gem 'carmen-rails'
 
 group :test do
@@ -86,5 +78,4 @@ group :test do
   gem 'sqlite3'
 end
 
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 
