@@ -1,3 +1,4 @@
+<%= render 'layouts/header' %>
 <h1> Map of Selected Attractions & Restuarants </h1>
 
 <p>
@@ -23,6 +24,6 @@
 </script>
 
 
-<%= link_to 'Trip Index', trips_path %>
+<%= link_to "Current Trips", trips_path, class: "btn btn-sm btn-primary" %>
+<%= link_to "Edit", trips_path(@trip), class: "btn btn-sm btn-primary" %>
 
-<%= link_to 'Show/Edit Trip', trip_path(@trip) %>
