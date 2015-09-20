@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   get 'welcome/index'
-<<<<<<< HEAD
-=======
-  get 'subregion_options' => 'trips#subregion_options'
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

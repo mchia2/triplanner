@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150829173017) do
-=======
 ActiveRecord::Schema.define(version: 20150913083454) do
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 
   create_table "pois", force: :cascade do |t|
     t.integer  "trip_id"
@@ -66,11 +62,8 @@ ActiveRecord::Schema.define(version: 20150913083454) do
     t.datetime "confirmation_sent_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-<<<<<<< HEAD
-=======
     t.string   "country_code"
     t.string   "state_code"
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
