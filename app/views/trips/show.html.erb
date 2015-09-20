@@ -1,3 +1,4 @@
+<% provide(:title, "Trip") %>
 <p>
   <strong>Destination: <%= @trip.place %> </strong>
   <br>
@@ -24,4 +25,4 @@
 <%= render 'unselected_restaurants' %>
 
 
-<%= link_to 'Trip Index', trips_path %>
+<%= link_to "Current Trips", trips_path, class: "btn btn-sm btn-primary" %>
