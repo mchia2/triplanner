@@ -20,6 +20,9 @@ Then(/^I should go back to the home page$/) do
   visit ('/')
 end
 
+Given(/^I am on the home page$/) do
+  visit '/'
+end
 
 
 

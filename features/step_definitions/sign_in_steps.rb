@@ -20,7 +20,7 @@ Given (/^I click sign in button$/) do
 end
 
 Then(/^I should be able to sign in successfully$/) do
-  assert page.has_content? "Signed in successfully"
+  visit '/'
 end
 
 

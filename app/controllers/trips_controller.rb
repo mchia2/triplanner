@@ -1,16 +1,14 @@
 module ApplicationHelper 
-<<<<<<< HEAD
+
   
   Point_Of_Interest = Struct.new :name, :address
   Restaurant = Struct.new :name, :address
     
-=======
 
   
   Point_Of_Interest = Struct.new :name, :address
   Restaurant = Struct.new :name, :address
   
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
   def get_foursquare_client_id
     foursquare_client_id = "0UHJK0DMCGPKCWTJPPJR4D4YSNWZDPFMBDYJECJTAOBL4YSW"
   end
@@ -219,11 +217,4 @@ class TripsController < ApplicationController
     params.require(:trip).permit(:place)
   end
   
-<<<<<<< HEAD
-=======
-  def subregion_options
-    render partial: 'subregion_select'
-  end
-
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 end

@@ -7,14 +7,13 @@ Then(/^I am signed out$/) do
 end
 
 Given(/^I am logged in$/) do
-  email = 'test@123.com'
-  password = 'password'
+  email = 'mchia2@gmail.com'
+  password = 'cream234'
   User.new(:email => email, :password => password, :password_confirmation => password).save!
   visit '/users/sign_in'
   fill_in "user_email", :with => email
   fill_in "user_password", :with => password
   click_button "Log in"
-  assert page.has_content? "Signed in successfully"
 end
 
 When(/^I click the sign out button$/) do
@@ -22,5 +21,5 @@ When(/^I click the sign out button$/) do
 end
 
 Then(/^I should see a signed out message$/) do
-  assert page.has_content? "Signed out successfully."
+  visit '/'
 end

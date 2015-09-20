@@ -17,18 +17,16 @@
     </div>
   <% end %>
  <%= render 'layouts/header' %>
-    <div class="container">
-      <div class="col-md-6 col-md-offset-3">
+    
       
-      <h1 alighn="left">
-        <%= f.label :place %>
-      </h1>
-      <h2><%= f.text_field :place %></h2>
+      
+      <h3><%= f.label :place %></h3>
+      
+      <p><%= f.text_field :place %></p>
       <%= yield %>
-      <p>
-        <%= f.submit %>
-      </p>
-    </div>
+    
+      <p><%= f.submit :Create %></p>
+    
   </body>
 
   
