@@ -1,34 +1,16 @@
-<!-- <h1> <center>  Welcome to TripPlanner </center></h1>
-
-
-<p align="center"><i> Use this web application to explore the best attractions and restaurants in cities! </i> </p>
-
-<p align="center">Please select one of the following: </p> 
-
-
-
-<div style="float:left;">
-	<center> <strong> <%= button_to "New Trip", new_trip_path, :class => "button", :method => :get %> </strong> </center> 
-</div>
-
-<div style="float:left;">
-	<center> <strong> <%= button_to "Current Trips", trips_path, :class => "button", :method => :get %> </strong> </center> 
-</div>
- -->
-<% provide(:title, "Trip") %>
 <!DOCTYPE html>
 <html>
-	<head>
-		<title><%= full_title(yield(:title)) %></title>
-	<%= stylesheet_link_tag 'application', media: 'all',
+  <head>
+    <title><%= full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag 'application', media: 'all',
                                            'data-turbolinks-track' => true %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
-	<!--[if lt IE 9]>
-	      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-	      </script>
-	    <![endif]-->
-	</head>
+  <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+        </script>
+      <![endif]-->
+  </head>
 <body>
 <% if user_signed_in? %>
 <header class="navbar navbar-fixed-top navbar-inverse">
@@ -81,7 +63,7 @@
   <%= link_to "Sign up now!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
 </div>
 
-<% end %>
+
 
 </html>
- 
+<% end %>
