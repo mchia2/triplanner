@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <%= render 'layouts/header' %>
+=======
+<% provide(:title, "Map") %>
+>>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 <h1> Map of Selected Attractions & Restuarants </h1>
 
 <p>
@@ -25,5 +29,10 @@
 
 
 <%= link_to "Current Trips", trips_path, class: "btn btn-sm btn-primary" %>
+<<<<<<< HEAD
 <%= link_to "Edit", trips_path(@trip), class: "btn btn-sm btn-success" %>
 <%= link_to 'Destroy', trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger" %>
+=======
+
+<%= link_to 'Edit Trip', trip_path(@trip), class: "btn-sm btn-success" %>
+>>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
