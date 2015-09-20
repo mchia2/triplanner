@@ -1,9 +1,5 @@
 <% provide(:title, "Trips") %>
-<<<<<<< HEAD
-<%= render 'layouts/header' %>
-=======
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
-
+<%= render "layouts/header" %> 
 <h1>Listing Trips</h1>
  
 <table>
@@ -16,7 +12,6 @@
   <% @trips = current_user.trips %>
   <% @trips.each do |trip| %>
     <tr>
-<<<<<<< HEAD
       <td><%= trip.place   %></td>
       <td><%= trip.user.email %></td>
       
@@ -37,40 +32,13 @@
         <% end %>
         
       </td> 
-=======
-      <td><%= trip.place	 %></td>
-      <td><%= trip.user.email %></td>
-      
-      <td> 
-      	<% trip.pois.each do |poi| %>
-      		<% if poi.selected %>
-      			<%= poi.name %>
-      		<% end %>
-      	<% end %>
-      	
-      </td>	
-      
-      <td> 
-      	<% trip.restaurants.each do |restaurant| %>
-      		<% if restaurant.selected %>
-      			<%= restaurant.name %>
-      		<% end %>
-      	<% end %>
-      	
-      </td>	
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
       
       
       
       <td><%= link_to 'Edit', trip_path(trip), class: "btn-sm btn-success" %></td>
       <td><%= link_to 'Map', map_trip_path(trip), class: "btn-sm btn-info" %> </td>
-<<<<<<< HEAD
     <td><%= link_to 'Destroy', trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger" %></td>
     
-=======
-	  <td><%= link_to 'Destroy', trip_path(trip), method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-danger" %></td>
-	  
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
     </tr>
   <% end %>
 </table>

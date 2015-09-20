@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-=======
 <html>
 <body>
 
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 <%= form_for @trip do |f| %>
  
   <% if @trip.errors.any? %>
@@ -19,18 +16,6 @@
       </ul>
     </div>
   <% end %>
-<<<<<<< HEAD
- 
-  <p>
-    <%= f.label :place %><br>
-    <%= f.text_field :place %>
-  </p>
- 
-  <p>
-    <%= f.submit %>
-  </p>
- 
-=======
  <%= render 'layouts/header' %>
     <div class="container">
       <div class="col-md-6 col-md-offset-3">
@@ -45,23 +30,9 @@
       </p>
     </div>
   </body>
-  <!-- <p>
-    <%= f.label :place %><br>
-    <%= f.text_field :place %>
-  </p> -->
-<!--   <div class="field">
-    <%= f.label :place %><br />
-    <%= f.country_select :place, {priority: %w(US CA), prompt: 'Please select a country'} %>
-  </div>
 
-  <div class="field">
-  <%= f.label :place %><br />
-  <%= render partial: 'subregion_select', locals: {parent_region: f.object.place} %>
-</div>
- -->
   
   
 </html>
   <!--  -->
->>>>>>> f9ea994bf76f51607928865ff8293602d00e667c
 <% end %>
