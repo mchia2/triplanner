@@ -5,4 +5,4 @@ Feature: Index Page Has Different Buttons
 
 	Scenerio: Index page
 		Given that I am logged in
-		Then there should exists edit, map, destroy buttons
+		Then there should exist an edit, map and destroy button

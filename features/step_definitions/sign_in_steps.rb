@@ -23,6 +23,9 @@ Then(/^I should be able to sign in successfully$/) do
   visit '/'
 end
 
+Then(/^there should exist an edit, map and destroy button$/) do
+  page.has_content? "Edit"
+end
 
 
 
